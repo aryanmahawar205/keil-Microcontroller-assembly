@@ -1,0 +1,3 @@
+".\Objects\task_2.obj" 
+TO ".\Objects\8 Bit Subtraction" 
+PRINT(".\Listings\8 Bit Subtraction.m51") RAMSIZE(256) 
