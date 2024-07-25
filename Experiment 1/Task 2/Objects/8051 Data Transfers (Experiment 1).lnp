@@ -1,0 +1,3 @@
+".\Objects\task_2.obj" 
+TO ".\Objects\8051 Data Transfers (Experiment 1)" 
+PRINT(".\Listings\8051 Data Transfers (Experiment 1).m51") RAMSIZE(256) 
