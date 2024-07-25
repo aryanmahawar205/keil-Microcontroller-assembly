@@ -1,0 +1,3 @@
+".\Objects\task_1.obj" 
+TO ".\Objects\8 Bit Addition" 
+PRINT(".\Listings\8 Bit Addition.m51") RAMSIZE(256) 

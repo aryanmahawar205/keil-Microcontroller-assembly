@@ -1,0 +1,32 @@
+A51 MACRO ASSEMBLER  TASK_1                                                               07/25/2024 21:42:43 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\task_1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task_1.a51 SET(SMALL) DEBUG PRINT(.\Listings\task_1.lst) OBJECT(.\Objec
+                      ts\task_1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+                       3     
+0000                   4     ORG 0000H
+0000 E530              5             MOV A, 30H
+0002 3531              6             ADDC A, 31H
+0004 F555              7             MOV 55H, A
+                       8             END
+A51 MACRO ASSEMBLER  TASK_1                                                               07/25/2024 21:42:43 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
