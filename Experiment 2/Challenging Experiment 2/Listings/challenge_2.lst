@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  CHALLENGE_2                                                          07/28/2024 12:25:06 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\challenge_2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE challenge_2.a51 SET(SMALL) DEBUG PRINT(.\Listings\challenge_2.lst) OBJE
+                      CT(.\Objects\challenge_2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+                       3     
+                       4     
+                       5     
+0000                   6     ORG 0000H
+0000 E530              7             MOV A, 30H
+0002 8531F0            8             MOV B, 31H
+0005 A4                9             MUL AB
+0006 F541             10             MOV 41H, A
+0008 85F040           11             MOV 40H, B
+000B 75F002           12             MOV B, #2H
+000E 84               13             DIV AB
+000F F542             14             MOV 42H, A
+0011 85F043           15             MOV 43H, B
+                      16             END
+A51 MACRO ASSEMBLER  CHALLENGE_2                                                          07/28/2024 12:25:06 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
