@@ -1,0 +1,3 @@
+".\Objects\task_6.obj" 
+TO ".\Objects\8 Bit Division" 
+PRINT(".\Listings\8 Bit Division.m51") RAMSIZE(256) 

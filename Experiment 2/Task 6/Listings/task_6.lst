@@ -1,0 +1,34 @@
+A51 MACRO ASSEMBLER  TASK_6                                                               07/28/2024 11:01:16 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\task_6.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task_6.a51 SET(SMALL) DEBUG PRINT(.\Listings\task_6.lst) OBJECT(.\Objec
+                      ts\task_6.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+0000                   3     ORG 0000H
+0000 E530              4             MOV A, 30H
+0002 8531F0            5             MOV B, 31H
+0005 84                6             DIV AB  
+0006 F540              7             MOV 40H, A
+0008 85F041            8             MOV 41H, B
+                       9             END
+A51 MACRO ASSEMBLER  TASK_6                                                               07/28/2024 11:01:16 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
