@@ -1,0 +1,3 @@
+".\Objects\task_4.obj" 
+TO ".\Objects\8 Bit Multiplication" 
+PRINT(".\Listings\8 Bit Multiplication.m51") RAMSIZE(256) 
