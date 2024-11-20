@@ -1,0 +1,16 @@
+// count number of zeroes and ones in a number (8 bit)
+
+ORG 0000H
+	MOV A, 30H
+	MOV R0, 08H
+	MOV R1, 00H // STORES NUMBER OF ONES
+	MOV R2, 00H // STORES NUMBER OF ZEROES
+	
+	AGAIN: RLC A
+	JNC ARYAN
+	INC R1
+	SJMP BACK
+	ARYAN: INC R2
+	BACK: DJNZ R0, AGAIN
+
+END

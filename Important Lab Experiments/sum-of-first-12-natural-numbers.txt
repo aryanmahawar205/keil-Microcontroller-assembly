@@ -1,0 +1,17 @@
+// SUM OF FIRST 12 NATURAL NUMBERS
+
+ORG 0000H
+	MOV R4, #12
+	CLR A
+	MOV R1, #01H
+	MOV R0, #00H //for carry
+	
+	LAB: ADD A, R1
+	     JNC LABE
+		 INC R0
+		 
+	LABE: INC R1
+	      DJNZ R4, LAB
+		  MOV 60H, A
+		  MOV 61, R0
+END

@@ -1,0 +1,58 @@
+LCD Code using DPTR to print HELLO
+
+P1.0 - P1.7 = D0 - D7
+P2.0 = RS
+P2.1 = R/W
+P2.2 = E
+
+ORG 0000H
+MOV DPTR, #MYCOM
+
+C1: CLR A
+         MOVC A, @A+DPTR
+         ACALL COMNWRT
+         ACALL DELAY
+         INC DPTR
+         JZ SEND_DAT
+         SJMP C1
+
+SEND_DAT: MOV DPTR, #MYDATA
+
+D1: CLR A
+         MOVC A, @A+DPTR
+         ACALL DATAWRT
+         ACALL DELAY
+         INC DPTR
+         JZ AGAIN
+         SJMP D1
+
+AGAIN: SJMP AGAIN
+
+// send command to LCD
+COMNWRT: MOV P1, A         //copy reg A to P1
+         CLR P2.0         //RS = 0 for command
+         CLR P2.1        //R/W = 0 for write
+         SETB P2.2      //E = 1 for high pulse
+         ACALL DELAY   //give LCD some time
+         CLR P2.2     //E = 0 for H to L pulse
+         RET
+
+// write data to LCD
+DATAWRT: MOV P1, A           //copy reg A to P1
+         SETB P2.0          //RS = 1 for data
+         CLR P2.1          //R/W = 0 for write
+         SETB P2.2        //E = 1 for high pulse
+         ACALL DELAY     //give LCD some time
+         CLR P2.2       //E = 0 for H to L pulse
+         RET 
+
+DELAY: MOV R3, #250
+HERE2: MOV R4, #255
+HERE: DJNZ R4, HERE
+      DJNZ R3, HERE2
+      RET
+
+ORG 300H
+MYCOM: DB 38H, 0EH, 01, 06, 84H, 0;  //LCD commands and null
+MYDATA: DB "HELLO", 0
+END
